@@ -62,7 +62,6 @@ ol {
   width: 399px;
   height: 298px;
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .content__details {
@@ -74,7 +73,7 @@ ol {
 
 .result__video-container {
   width: 711px;
-  height: 456px;
+  height: 386px;
   position: relative;
   margin-block-end: 16px;
 }
@@ -88,6 +87,10 @@ ol {
 
 .content__list-item:not(:last-child) {
   margin-block-end: 30px;
+}
+
+.content__list-item {
+  max-width: 394px;
 }
 
 .content__video-card {
@@ -108,13 +111,7 @@ ol {
   flex-direction: column;
   flex-grow: 1;
   align-content: stretch;
-}
-
-.result__video-container {
-  position: relative;
-  width: 711px;
-  height: 386px;
-  margin-block-end: 16px;
+  max-width: 200px;
 }
 
 .title {
@@ -134,7 +131,7 @@ ol {
   font-style: normal;
   line-height: normal;
   margin-block-end: 5px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: inherit;
 }
 
@@ -151,6 +148,10 @@ ol {
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -167,7 +168,7 @@ ol {
   white-space: nowrap;
 }
 
-.fieldset {
+.search-form__fieldset {
   border: none;
 }
 
@@ -197,7 +198,7 @@ ol {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
-  background-color: #1b1919;
+  background-color: transparent;
   appearance: none;
 }
 
@@ -212,7 +213,7 @@ ol {
   font-weight: 700;
   font-size: inherit;
   border: 1px solid currentColor;
-  background-color: #1b1919;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -234,14 +235,6 @@ ol {
   border: 1px solid currentColor;
 }
 
-.search-form__label-text:focus {
-  outline: none;
-}
-
-.search-form__label:focus {
-  outline: none;
-}
-
 .search-form__textfield:focus {
   outline: none;
 }
@@ -258,10 +251,6 @@ ol {
   height: 15px;
   margin: 1px;
   background-color: currentColor;
-}
-
-.search-form__checkbox:hover {
-  text-decoration: underline;
 }
 
 .search-form__textfield:active {
@@ -308,6 +297,13 @@ ol {
 .content__card-link:active {
   background: #545050;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+
 
 
 
